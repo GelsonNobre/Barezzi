@@ -26,7 +26,8 @@ public class TelaLogin extends javax.swing.JFrame {
             // O ? é substituido pelo que foi digitado
             pst = conexao.prepareStatement(sql);
             pst.setString(1, txtUsuario.getText());
-            pst.setString(2, txtSenha.getText());
+            String capturaSenha = new String(txtSenha.getPassword());
+            pst.setString(2, capturaSenha);
             // a linha abaixo executa a consulta ao BD 
             rs = pst.executeQuery();
             // se existir usuário e senha correspondente
