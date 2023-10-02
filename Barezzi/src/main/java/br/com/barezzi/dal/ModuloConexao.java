@@ -24,7 +24,8 @@ public class ModuloConexao {
             conexao = DriverManager.getConnection(url, user, password);
             return conexao;
         } catch (Exception e) {
-            System.out.println(e);
+            //A linha abaixo serve para verificar o motivo da falha de comunicação com o BD
+            //System.out.println(e);
             return null;
         }
                 
